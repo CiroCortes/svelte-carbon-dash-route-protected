@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Juan Pérez",
+        "group": "ejecutivo",
+        "active": "si"
+    },
+    {
+        "id": 2,
+        "name": "Ana García",
+        "group": "administrador",
+        "active": "si"
+    },
+    {
+        "id": 3,
+        "name": "Pablo Martínez",
+        "group": "ejecutivo",
+        "active": "no"
+    },
+    {
+        "id": 4,
+        "name": "Laura Rodríguez",
+        "group": "administrador",
+        "active": "si"
+    },
+    {
+        "id": 5,
+        "name": "Mario González",
+        "group": "ejecutivo",
+        "active": "no"
+    },
+    {
+        "id": 6,
+        "name": "Sandra Díaz",
+        "group": "administrador",
+        "active": "si"
+    },
+    {
+        "id": 7,
+        "name": "Carlos Fernández",
+        "group": "ejecutivo",
+        "active": "si"
+    },
+    {
+        "id": 8,
+        "name": "Raquel López",
+        "group": "administrador",
+        "active": "no"
+    },
+    {
+        "id": 9,
+        "name": "Pablo Ruiz",
+        "group": "ejecutivo",
+        "active": "si"
+    },
+    {
+        "id": 10,
+        "name": "Andrea Giménez",
+        "group": "administrador",
+        "active": "no"
+    },
+    {
+        "id": 11,
+        "name": "Sergio Castro",
+        "group": "ejecutivo",
+        "active": "si"
+    },
+    {
+        "id": 12,
+        "name": "Gema García",
+        "group": "administrador",
+        "active": "si"
+    },
+    {
+        "id": 13,
+        "name": "Pablo Sanz",
+        "group": "ejecutivo",
+        "active": "no"
+    },
+    {
+        "id": 14,
+        "name": "María Jiménez",
+        "group": "administrador",
+        "active": "si"
+    },
+    {
+        "id": 15,
+        "name": "Álvaro Rodríguez",
+        "group": "ejecutivo",
+        "active": "no"
+    }
+]

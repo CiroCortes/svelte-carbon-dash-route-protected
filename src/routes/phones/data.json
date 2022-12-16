@@ -1,0 +1,52 @@
+[
+    {
+        "telefono": "123-456-7890",
+        "servidor": "192.168.1.1",
+        "status": "si"
+    },
+    {
+        "telefono": "234-567-8901",
+        "servidor": "192.168.1.2",
+        "status": "no"
+    },
+    {
+        "telefono": "345-678-9012",
+        "servidor": "192.168.1.3",
+        "status": "si"
+    },
+    {
+        "telefono": "456-789-0123",
+        "servidor": "192.168.1.4",
+        "status": "no"
+    },
+    {
+        "telefono": "567-890-1234",
+        "servidor": "192.168.1.5",
+        "status": "si"
+    },
+    {
+        "telefono": "678-901-2345",
+        "servidor": "192.168.1.6",
+        "status": "no"
+    },
+    {
+        "telefono": "789-012-3456",
+        "servidor": "192.168.1.7",
+        "status": "si"
+    },
+    {
+        "telefono": "890-123-4567",
+        "servidor": "192.168.1.8",
+        "status": "no"
+    },
+    {
+        "telefono": "901-234-5678",
+        "servidor": "192.168.1.9",
+        "status": "si"
+    },
+    {
+        "telefono": "012-345-6789",
+        "servidor": "192.168.1.10",
+        "status": "no"
+    }
+]
