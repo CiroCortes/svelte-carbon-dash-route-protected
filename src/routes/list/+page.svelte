@@ -2,9 +2,22 @@
     import "carbon-components-svelte/css/g80.css";
     import { DataTable } from "carbon-components-svelte";
     import { fade } from "svelte/transition";
+    import { user } from '../stores/store';
+    import { navigate } from 'svelte-routing';
+	  import { onMount } from 'svelte';
+
+	onMount(()=>{
+		if(!$user){
+			console.log("user no existe")
+		
+		navigate("/login",{replace:true})
+
+	}
+
+	});
   </script>
 
-  <div in:fade>
+  <div class="container-list" in:fade>
     <DataTable 
     headers={[
       { key: "nameList", value: "Name List" },
@@ -80,6 +93,15 @@
   />
 
   </div>
+
+  <style>
+    .container-list{
+      display: grid;
+      margin-left: 5vh;
+      margin-right: 5vh;
+          
+    }
+  </style>
   
   
   
