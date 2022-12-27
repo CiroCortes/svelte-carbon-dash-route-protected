@@ -1,6 +1,6 @@
-<script>
+<script lang="ts">
 	import 'carbon-components-svelte/css/g80.css';
-	import { user } from '../routes/stores/store';
+
 	import {
 		Header,
 		HeaderNav,
@@ -12,83 +12,76 @@
 		SideNavMenuItem,
 		SideNavLink,
 		SkipToContent,
-		Content
+		Content,
+		Button,		
 	} from 'carbon-components-svelte';
 
 	let isSideNavOpen = false;
 </script>
-{#if $user}
+
 <Header persistentHamburgerMenu={true} company="XX" platformName="DashBoard" bind:isSideNavOpen>
 	<svelte:fragment slot="skip-to-content">
-		 <SkipToContent /> 
+		<SkipToContent />
 	</svelte:fragment>
-	{#if $user}
-		<HeaderNav>
-			<HeaderNavItem href="/" text="Reports" />
-			<HeaderNavItem href="/list" text="List" />
-			<HeaderNavItem href="/agents" text="Active-Agents" />
-			<HeaderNavMenu text="Settings">
-				<HeaderNavItem href="/users" text="Users" />
-				<HeaderNavItem href="/phones" text="Phones" />
-				<HeaderNavItem
-					on:click={() => {
-						user.setUser(null);
-					}}
-					href="/login"
-					text="Logout"
-				/>
-			</HeaderNavMenu>
-		</HeaderNav>
-	{/if}
+
+	<HeaderNav>
+		<HeaderNavItem href="/protected/dash" text="Reports" />
+		<HeaderNavItem href="/protected/list" text="List" />
+		<HeaderNavItem href="/protected/agents" text="Active-Agents" />
+		<HeaderNavMenu text="Settings">
+			<HeaderNavItem href="/protected/users" text="Users" />
+			<HeaderNavItem href="/protected/phones" text="Phones" />
+			<form action="/logout" method="POST">
+				<Button expressive kind="ghost" size="small" type="submit">Logout</Button>
+			</form>
+		</HeaderNavMenu>
+	</HeaderNav>
 </Header>
 
-{/if}
-{#if $user}
-	<SideNav bind:isOpen={isSideNavOpen}>
-		<SideNavItems>
-			<SideNavLink
-				href="/"
-				text="Reports"
+<SideNav bind:isOpen={isSideNavOpen}>
+	<SideNavItems>
+		<SideNavLink
+			href="/protected/dash"
+			text="Reports"
+			on:click={() => {
+				isSideNavOpen = false;
+			}}
+		/>
+		<SideNavLink
+			href="/protected/list"
+			text="List"
+			on:click={() => {
+				isSideNavOpen = false;
+			}}
+		/>
+		<SideNavLink
+			href="/protected/agents"
+			text="agents"
+			on:click={() => {
+				isSideNavOpen = false;
+			}}
+		/>
+		<SideNavMenu text="Settings">
+			<SideNavMenuItem
+				href="/protected/users"
+				text="Users"
 				on:click={() => {
 					isSideNavOpen = false;
 				}}
 			/>
-			<SideNavLink
-				href="/list"
-				text="List"
+			<SideNavMenuItem
+				href="/protected/phones"
+				text="Phones"
 				on:click={() => {
 					isSideNavOpen = false;
 				}}
 			/>
-			<SideNavLink
-				href="/agents"
-				text="agents"
-				on:click={() => {
-					isSideNavOpen = false;
-				}}
-			/>
-			<SideNavMenu text="Settings">
-				<SideNavMenuItem
-					href="/users"
-					text="Users"
-					on:click={() => {
-						isSideNavOpen = false;
-					}}
-				/>
-				<SideNavMenuItem
-					href="/phones"
-					text="Phones"
-					on:click={() => {
-						isSideNavOpen = false;
-					}}
-				/>
-				<SideNavMenuItem 
-				on:click={() => {
-					user.setUser(null);
-				}} href="/login" text="Logout" />
-			</SideNavMenu>
-		</SideNavItems>
-	</SideNav>
-{/if}
+
+			<form action="/logout" method="POST">
+				<Button expressive kind="ghost" size="small" type="submit">Logout</Button>
+			</form>
+		</SideNavMenu>
+	</SideNavItems>
+</SideNav>
 
 <Content />

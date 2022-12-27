@@ -14,19 +14,9 @@
 	import { fade } from 'svelte/transition';
 	import data from './data.json';
 	export let tabledata = data;
-	import { user } from '../stores/store';
-    import { navigate } from 'svelte-routing';
-	  import { onMount } from 'svelte';
+	
 
-	onMount(()=>{
-		if(!$user){
-			console.log("user no existe")
-		
-		navigate("/login",{replace:true})
-
-	}
-
-	});
+	
 	//console.log(tabledata);
 </script>
 
